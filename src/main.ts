@@ -7,7 +7,11 @@ async function bootstrap() {
   // load env
   GLOBAL.env = loadEnv();
 
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, {
+    bodyParser: true,
+    cors: true,
+    logger: ['log'],
+  });
   await app.listen(3000);
 }
 bootstrap();
