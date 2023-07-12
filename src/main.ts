@@ -10,8 +10,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     bodyParser: true,
     cors: true,
-    logger: ['log'],
   });
-  await app.listen(3000);
+
+  await app.listen(GLOBAL.env.PORT);
 }
 bootstrap();
