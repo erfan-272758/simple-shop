@@ -6,6 +6,7 @@ import {
   IsPositive,
   IsString,
   Length,
+  Max,
 } from 'class-validator';
 export class ProductBody {
   @Expose()
@@ -28,5 +29,6 @@ export class ProductQuery {
   @IsOptional()
   @IsPositive()
   @IsInt()
+  @Max(32)
   limit: number;
 }

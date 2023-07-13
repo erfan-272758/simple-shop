@@ -14,7 +14,7 @@ export class Product {
   owner: mongoose.Types.ObjectId;
 
   @Prop({ type: String, required: true, trim: true })
-  name: string;
+  title: string;
 
   @Prop({ type: String, required: true, trim: true })
   description: string;

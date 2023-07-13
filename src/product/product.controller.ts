@@ -23,8 +23,8 @@ import { UserDocument } from 'models/user.model';
 import { ProductBody, ProductQuery } from 'DTO/product/incoming.dto';
 
 @Controller('/api/v1/product')
-@Protect()
 @RestrictTo(UserState.Active)
+@Protect()
 export class ProductController {
   constructor(private service: ProductService) {}
 
