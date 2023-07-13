@@ -18,11 +18,8 @@ import { MorganModule, MorganInterceptor } from 'nest-morgan';
         dbName: 'simple-shop',
       }),
     }),
-    MongooseModule.forFeature([
-      { name: User.name, schema: UserSchema },
-      { name: Product.name, schema: ProductSchema },
-    ]),
     JwtModule.registerAsync({
+      global: true,
       useFactory: () => ({
         secret: GLOBAL.env.APP_JWT_SECRET,
         signOptions: { expiresIn: '90d' },
