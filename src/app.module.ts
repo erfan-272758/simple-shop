@@ -26,7 +26,7 @@ import { ProductModule } from './product/product.module';
         signOptions: { expiresIn: '90d' },
       }),
     }),
-    AuthModule,
+    AuthModule.forRoot(),
     ProductModule,
   ],
   controllers: [],
