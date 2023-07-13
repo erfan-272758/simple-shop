@@ -8,6 +8,7 @@ import { User, UserSchema } from 'models/user.model';
 import { Product, ProductSchema } from 'models/product.model';
 import { JwtModule } from '@nestjs/jwt';
 import { MorganModule, MorganInterceptor } from 'nest-morgan';
+import { ProductModule } from './product/product.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { MorganModule, MorganInterceptor } from 'nest-morgan';
       }),
     }),
     AuthModule,
+    ProductModule,
   ],
   controllers: [],
   providers: [
