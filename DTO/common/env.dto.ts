@@ -21,4 +21,13 @@ export class EnvDto {
 
   @IsString()
   APP_JWT_SECRET: string;
+
+  @IsString()
+  EMAIL_DOMAIN: string;
+
+  @IsString()
+  EMAIL_API_KEY: string;
+
+  @IsString()
+  EMAIL_FROM: string;
 }
