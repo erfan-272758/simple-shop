@@ -15,12 +15,17 @@ a small store server designed with nestjs framework , use mongodb for storage da
 ## Documentation
 - base url => `/api/v1`
 ### Auth
-- `POST    |    /auth/signup    |    {fistName:string, lastName:string , password:string, email:string} `
-- `POST    |    /auth/login |    {email:string, password:string}`
-- `GET    |    /auth/verifyEmail/:userId?token=`
+| Method | Url | Body |
+| --- | ----------- | ------------- |
+|  POST  |  /auth/signup  |    {fistName:string, lastName:string  | password:string, email:string}  |
+|  POST  |  /auth/login |    {email:string, password:string}  |
+|  GET  |  /auth/verifyEmail/:userId?token=  |
+
 
 ### Product
-- `POST    |    /product    |    {title:string, description:string}`
-- `GET     |    /product`
+| Method | Url | Body |
+| --- | ----------- | ------------- |
+|  POST  |  /product  |  {title:string, description:string}  |
+|  GET   |  /product  |
 
 for more details see [postman workspace](https://www.postman.com/vilibook/workspace/simple-shop/overview)
