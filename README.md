@@ -17,7 +17,7 @@ a small store server designed with nestjs framework , use mongodb for storage da
 ### Auth
 | Method | Url | Body |
 | --- | ----------- | ------------- |
-|  POST  |  /auth/signup  |    {fistName:string, lastName:string  | password:string, email:string}  |
+|  POST  |  /auth/signup  |    {fistName:string, lastName:string}  | password:string, email:string}  |
 |  POST  |  /auth/login |    {email:string, password:string}  |
 |  GET  |  /auth/verifyEmail/:userId?token=  |
 
@@ -26,6 +26,6 @@ a small store server designed with nestjs framework , use mongodb for storage da
 | Method | Url | Body |
 | --- | ----------- | ------------- |
 |  POST  |  /product  |  {title:string, description:string}  |
-|  GET   |  /product  |
+|  GET   |  /product?skip=&limit=  |
 
 for more details see [postman workspace](https://www.postman.com/vilibook/workspace/simple-shop/overview)
